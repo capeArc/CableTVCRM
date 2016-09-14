@@ -6,7 +6,7 @@ import android.text.TextWatcher;
 /**
  * Created by Pavan on 9/14/2016.
  */
-public class TextWatcherAdapter implements TextWatcher {
+public abstract class TextWatcherAdapter implements TextWatcher {
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -18,7 +18,5 @@ public class TextWatcherAdapter implements TextWatcher {
     }
 
     @Override
-    public void afterTextChanged(Editable s) {
-
-    }
+    public abstract void afterTextChanged(Editable s);
 }
