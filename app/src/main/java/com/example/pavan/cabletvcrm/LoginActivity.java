@@ -1,13 +1,20 @@
 package com.example.pavan.cabletvcrm;
 
+import android.app.Activity;
+import android.database.DatabaseUtils;
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class LoginActivity extends AppCompatActivity {
+import com.example.pavan.cabletvcrm.databinding.ActivityLoginBinding;
+
+public class LoginActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        ActivityLoginBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_login);
+
     }
 }

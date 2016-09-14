@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CableTVCRM</string>
+    <string name="Cable_Tv_Crm">Cable Tv Crm</string>
+    <string name="Sign_In">Sign-In</string>
+    <string name="Name">Name</string>
+    <string name="password">•••••••</string>
+    <string name="sign_button">SIGN IN</string>
+    <string name="Remember_Me">Remember Me</string>
+    <string name="Forgot_Password">Forgot Password? Click Here</string>
+    <string name="title2">Collection History</string>
 </resources>
