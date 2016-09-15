@@ -18,11 +18,5 @@ public class LoginActivity extends Activity {
       ActivityLoginBinding binding  = DataBindingUtil.setContentView(this,R.layout.activity_login);
 
         binding.setLoginmodel(new LoginViewModel());
-
-
-
     }
-
-
-
 }
