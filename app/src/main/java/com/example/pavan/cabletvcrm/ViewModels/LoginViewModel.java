@@ -2,22 +2,21 @@ package com.example.pavan.cabletvcrm.ViewModels;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.databinding.BaseObservable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Toast;
 
 import com.example.pavan.cabletvcrm.Activity.ErrorMesssageActivity;
 import com.example.pavan.cabletvcrm.Activity.LandingPage1;
 import com.example.pavan.cabletvcrm.Adapters.TextWatcherAdapter;
 import com.example.pavan.cabletvcrm.R;
-
-import java.util.jar.Attributes;
+import com.example.service.LoginLogic;
 
 /**
  * Created by Pavan on 9/14/2016.
  */
-public class LoginViewModel {
+public class LoginViewModel extends BaseObservable {
 
     public String getName() {
         return name;
@@ -42,27 +41,36 @@ public class LoginViewModel {
         @Override
         public void afterTextChanged(Editable s) {
  setName(s.toString());
+            if(s.toString().isEmpty()) {
+                setNameerror("Plz Enter username");
+                notifyChange();
+            }
+            else
+            {
+                notifyChange();
+            }
         }
     };
+
+
+    public String getNameerror() {
+        return nameerror;
+    }
+
+    public void setNameerror(String nameerror) {
+        this.nameerror = nameerror;
+    }
+
+    String  nameerror;
+
 
     public void onClick(View V)
 
     {
 
         Activity activity = (Activity)V.getContext();
-        if(name.equals("Admin"))
-        {
+         new LoginLogic(activity);
 
-            Intent i =new Intent(V.getContext(),LandingPage1.class);
-            V.getContext().startActivity(i);
-            activity.overridePendingTransition(R.anim.right,R.anim.right);
-        }
-        else
-        {
-            Intent i =new Intent(V.getContext(),ErrorMesssageActivity.class);
-            V.getContext().startActivity(i);
-
-        }
     }
 
 

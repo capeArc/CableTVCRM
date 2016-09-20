@@ -5,24 +5,11 @@
 
     <!-- view background color -->
     <solid
-        android:color="#3498DB" >
+        android:color="@color/title" >
     </solid>
-
-    <!-- view border color and width -->
-    <stroke
-        android:width="2dp"
-        android:color="#3498DB" >
-    </stroke>
-
 
     <!-- Here is the corner radius -->
     <corners
         android:radius="40dp"   >
     </corners>
-
-    <size
-        android:width="20dp"
-        android:height="10dp">
-
-    </size>
 </shape>

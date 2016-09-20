@@ -15,8 +15,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      ActivityLoginBinding binding  = DataBindingUtil.setContentView(this,R.layout.activity_login);
-
+        ActivityLoginBinding binding  = DataBindingUtil.setContentView(this,R.layout.activity_login);
         binding.setLoginmodel(new LoginViewModel());
     }
 }
