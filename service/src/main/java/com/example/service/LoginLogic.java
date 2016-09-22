@@ -13,15 +13,16 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+import JsonParser.JsonParser;
+
 /**
  * Created by Pavan on 9/16/2016.
  */
-public class LoginLogic {
+public class LoginLogic implements JsonParser {
 
     AQuery aq;
     Activity refactivity;
 
-    Map<String, Void> params = new HashMap<K, V>();
 
     public LoginLogic(Activity activity) {
 
@@ -31,51 +32,28 @@ public class LoginLogic {
     }
 
     public void post() {
-        aq.ajax("http://cphapi.capearc.local/CablePayHomeService.svc/Authenticate", JSONObject.class, refactivity, "jsoncallback");
-
-        String stringentity = "{\n" +
-                "  \"Token\": \"aKFhVsGgGftCeCc8TTr\\/26P\\/xmW1COrGiEIuxsPIL7FQgn6GWQWPw3+ZYZtHU1j9\",\n" +
-                "  \"EntitySet\": [\n" +
-                "    {\n" +
-                "      \"Password\": \"1234\"\n" +
-                "    }\n" +
-                "  ]\n" +
-                "}\n";
-
-        params.put(AQuery.POST_ENTITY, createStringEntity(stringentity));
 
 
     }
 
-    public void jsonCallback(String url, JSONObject json, AjaxStatus status) {
 
-        if (json != null) {
-            Toast.makeText(refactivity, ""+json, Toast.LENGTH_SHORT).show();
-        } else {
-            //ajax error
-        }
-    }
+    @Override
+    public JSONObject jsonParser() {
+        JSONObject jsonTokenobj=new JSONObject();
 
-    public Void createStringEntity(String str) {
-
-        JSONObject data = null;
         try {
-            data = new JSONObject(str).getJSONObject("data");
+            jsonTokenobj.put("Token","aKFhVsGgGftCeCc8TTr26PxmW1COrGiEIuxsPIL7FQgn6GWQWPw3+ZYZtHU1j9");
+
+            JSONObject jsonEntityobj=new JSONObject();
+            jsonEntityobj.put("password","1234");
+            jsonTokenobj.put("EntitySet",jsonEntityobj);
+             JSONObject  result=new JSONObject();
+
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
-// get a JSONArray from inside an object
-        try {
-            JSONArray translations = data.getJSONArray("translations");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return null;
+        return  jsonTokenobj;
     }
-
-
-
-
-
-
 }

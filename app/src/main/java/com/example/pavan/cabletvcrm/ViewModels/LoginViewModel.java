@@ -6,6 +6,7 @@ import android.databinding.BaseObservable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.pavan.cabletvcrm.Activity.ErrorMesssageActivity;
 import com.example.pavan.cabletvcrm.Activity.LandingPage1;
@@ -69,7 +70,9 @@ public class LoginViewModel extends BaseObservable {
     {
 
         Activity activity = (Activity)V.getContext();
-         new LoginLogic(activity);
+
+
+        Toast.makeText(activity, ""+new LoginLogic(activity).jsonParser().toString(),  Toast.LENGTH_LONG).show();
 
     }
 
