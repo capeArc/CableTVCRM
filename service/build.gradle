@@ -23,4 +23,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile project(':android_query')
+    compile project(':apache-httpcomponents-httpclient')
+    compile project(':httpcore-4.2.3')
 }

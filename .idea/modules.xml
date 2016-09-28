@@ -3,8 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CableTVCRM.iml" filepath="$PROJECT_DIR$/CableTVCRM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aescrypt-0.0.1/aescrypt-0.0.1.iml" filepath="$PROJECT_DIR$/aescrypt-0.0.1/aescrypt-0.0.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/android_query/android_query.iml" filepath="$PROJECT_DIR$/android_query/android_query.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apache-httpcomponents-httpclient/apache-httpcomponents-httpclient.iml" filepath="$PROJECT_DIR$/apache-httpcomponents-httpclient/apache-httpcomponents-httpclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apache-httpcomponents-httpcore/apache-httpcomponents-httpcore.iml" filepath="$PROJECT_DIR$/apache-httpcomponents-httpcore/apache-httpcomponents-httpcore.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/httpcore-4.2.3/httpcore-4.2.3.iml" filepath="$PROJECT_DIR$/httpcore-4.2.3/httpcore-4.2.3.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
     </modules>
   </component>

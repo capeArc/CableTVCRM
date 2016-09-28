@@ -72,7 +72,7 @@ public class LoginViewModel extends BaseObservable {
         Activity activity = (Activity)V.getContext();
 
 
-        Toast.makeText(activity, ""+new LoginLogic(activity).jsonParser().toString(),  Toast.LENGTH_LONG).show();
+        //Toast.makeText(activity, ""+new LoginLogic(activity,getName(),getPassword()).jsonParser().toString(),  Toast.LENGTH_LONG).show();
 
     }
 

@@ -1,1 +1,1 @@
-include ':app', ':service', ':android_query'
+include ':app', ':service', ':android_query', ':aescrypt-0.0.1', ':apache-httpcomponents-httpclient', ':apache-httpcomponents-httpcore', ':httpcore-4.2.3'
